@@ -199,11 +199,11 @@ func initXpcIDs() error {
 		evtRSSIRead = 55
 		evtServiceDiscovered = 82
 		evtCharacteristicsDiscovered = 89
-		evtCharacteristicRead = 70
+		evtCharacteristicRead = 95
 		evtCharacteristicWritten = 84
 		evtNotificationValueSet = 86
 		evtDescriptorsDiscovered = 99
-		evtDescriptorRead = 95
+		evtDescriptorRead = 70
 		evtDescriptorWritten = 91
 		evtAdvertisingStarted = 27
 		evtAdvertisingStopped = 28
