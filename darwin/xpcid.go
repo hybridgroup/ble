@@ -65,8 +65,8 @@ func initXpcIDs() error {
 	}
 
 	cmdInit = 1
-
-	if utsname.Release < "17." {
+	switch {
+	case utsname.Release < "17.":
 		// yosemite
 		cmdAdvertiseStart = 8
 		cmdAdvertiseStop = 9
@@ -117,7 +117,7 @@ func initXpcIDs() error {
 		evtMasterConnectionComplete = 82
 
 		serviceID = "com.apple.blued"
-	} else {
+	case utsname.Release < "18.":
 		// high sierra
 		cmdSendData = 21
 		cmdSubscribed = 22
@@ -162,7 +162,57 @@ func initXpcIDs() error {
 		evtUnsubscribe = 33
 		evtConfirmation = 34
 		evtATTMTU = 57
-		evtSlaveConnectionComplete = 60 // should be called params update
+		evtSlaveConnectionComplete = 60  // should be called params update
+		evtMasterConnectionComplete = 59 //not confident
+		evtIncludedServicesDiscovered = 76
+
+		serviceID = "com.apple.bluetoothd"
+	case utsname.Release >= "18.":
+		// mojave
+		cmdSendData = 21
+		cmdSubscribed = 22
+		cmdAdvertiseStart = 16
+		cmdAdvertiseStop = 17
+		cmdServicesAdd = 18
+		cmdServicesRemove = 19
+		cmdScanningStart = 46
+		cmdScanningStop = 47
+		cmdConnect = 48
+		cmdDisconnect = 49
+		cmdReadRSSI = 71
+		cmdDiscoverServices = 72
+		cmdDiscoverIncludedServices = 74
+		cmdDiscoverCharacteristics = 87
+		cmdReadCharacteristic = 100
+		cmdWriteCharacteristic = 79
+		cmdSubscribeCharacteristic = 81
+		cmdDiscoverDescriptors = 94
+		cmdReadDescriptor = 88
+		cmdWriteDescriptor = 89
+
+		evtStateChanged = 6
+		evtPeripheralDiscovered = 51
+		evtPeripheralConnected = 67
+		evtPeripheralDisconnected = 40
+		evtRSSIRead = 55
+		evtServiceDiscovered = 82
+		evtCharacteristicsDiscovered = 89
+		evtCharacteristicRead = 83
+		evtCharacteristicWritten = 84
+		evtNotificationValueSet = 86
+		evtDescriptorsDiscovered = 99
+		evtDescriptorRead = 95
+		evtDescriptorWritten = 91
+		evtAdvertisingStarted = 27
+		evtAdvertisingStopped = 28
+		evtServiceAdded = 29
+		evtReadRequest = 30
+		evtWriteRequest = 31
+		evtSubscribe = 32
+		evtUnsubscribe = 33
+		evtConfirmation = 34
+		evtATTMTU = 53
+		evtSlaveConnectionComplete = 60  // should be called params update
 		evtMasterConnectionComplete = 59 //not confident
 		evtIncludedServicesDiscovered = 76
 
