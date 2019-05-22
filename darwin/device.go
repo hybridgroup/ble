@@ -510,7 +510,7 @@ func (d *Device) HandleXpcEvent(event xpc.Dict, err error) {
 		d.connLock.Unlock()
 		close(c.done)
 
-	case evtCharacteristicRead:
+	case evtCharacteristicRead, evtCharacteristicRead2:
 		// Notification
 		c := d.conn(args)
 
