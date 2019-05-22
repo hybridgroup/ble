@@ -29,6 +29,7 @@ var (
 	cmdReadDescriptor,
 	cmdWriteDescriptor,
 	evtStateChanged,
+	evtStateChanged2,
 	evtAdvertisingStarted,
 	evtAdvertisingStopped,
 	evtServiceAdded,
