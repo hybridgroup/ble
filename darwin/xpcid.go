@@ -46,6 +46,7 @@ var (
 	evtServiceDiscovered,
 	evtIncludedServicesDiscovered,
 	evtCharacteristicsDiscovered,
+	evtCharacteristicsDiscovered2,
 	evtCharacteristicRead,
 	evtCharacteristicRead2,
 	evtCharacteristicWritten,
@@ -199,7 +200,8 @@ func initXpcIDs() error {
 		evtPeripheralDisconnected = 40
 		evtRSSIRead = 55
 		evtServiceDiscovered = 82
-		evtCharacteristicsDiscovered = 89
+		evtCharacteristicsDiscovered = 63
+		evtCharacteristicsDiscovered2 = 89
 		evtCharacteristicRead = 70
 		evtCharacteristicRead2 = 95
 		evtCharacteristicWritten = 84

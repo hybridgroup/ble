@@ -528,6 +528,7 @@ func (d *Device) HandleXpcEvent(event xpc.Dict, err error) {
 		evtServiceDiscovered,
 		evtIncludedServicesDiscovered,
 		evtCharacteristicsDiscovered,
+		evtCharacteristicsDiscovered2,
 		evtCharacteristicWritten,
 		evtNotificationValueSet,
 		evtDescriptorsDiscovered,
