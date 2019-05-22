@@ -405,6 +405,7 @@ func (d *Device) HandleXpcEvent(event xpc.Dict, err error) {
 	switch m.id() {
 	case // Device event
 		evtStateChanged,
+		evtStateChanged2,
 		evtAdvertisingStarted,
 		evtAdvertisingStopped,
 		evtServiceAdded:

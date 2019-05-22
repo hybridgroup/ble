@@ -190,7 +190,8 @@ func initXpcIDs() error {
 		cmdReadDescriptor = 88
 		cmdWriteDescriptor = 89
 
-		evtStateChanged = 6
+		evtStateChanged = 4
+		evtStateChanged2 = 6
 		evtPeripheralDiscovered = 51
 		evtPeripheralConnected = 67
 		evtPeripheralDisconnected = 40
